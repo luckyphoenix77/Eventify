@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventify</title>
+  <link rel="stylesheet" href="gpt.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h3 class="link">
+        Event<span style="color: #e91e63;" id="one">ify</span> 
+        <span id="scrolling-text"><marquee>Connect with College Events & Clubs</marquee></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="log.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="abous.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Events Section -->
+  <section class="events-container">
+    <h2>Upcoming Events</h2>
+    <ul id="event-list">
+      <!-- Event items will be dynamically added here -->
+    </ul>
+    <button onclick="showAddEventForm()">Add Event</button>
+  </section>
+
+ <!-- Add Event Form -->
+<div id="add-event-form" class="form-container" style="display: none; ">
+    <h2>Add New Event</h2>
+    <form id="eventForm" style="padding: 9px 10px;">
+      <input type="text" id="eventName" placeholder="Event Name" required>
+      <input type="date" id="eventDate" required>
+      <input type="text" id="eventTime" placeholder="HH:MM AM/PM" required>
+      <input type="text" id="eventVenue" placeholder="Event Venue" required>
+      <textarea id="eventDescription" placeholder="Event Description" required ></textarea>
+      <input type="file" id="eventImage" accept="image/*" required>
+      <button type="submit">Add Event</button>
+      <button type="button" onclick="hideAddEventForm()">Cancel</button>
+    </form>
+  </div>
+  
+
+  <!-- Event Details Modal -->
+  <div id="eventDetailsModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeEventDetails()">&times;</span>
+      <h2 id="modalEventName"></h2>
+      <p id="modalEventDate"></p>
+      <img id="modalEventImage" alt="Event Image">
+      <p id="modalEventDescription" style="height: auto;"></p>
+      <button id="registerButton" onclick="registerForEvent()">Register for this Event</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="gpt.js"></script>
+</body>
+</html>

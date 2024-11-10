@@ -1,0 +1,249 @@
+/* General styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Bar */
+header {
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    padding: 20px 0;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+.logo {
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+#scrolling-text {
+    display: inline-block;
+    width: calc(100% - 10px); /* Adjust based on space after "Eventify:" */
+    margin-left: 15px;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    animation: scrollingText 10s linear infinite;
+}
+.logo span {
+    color: #e91e63;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.nav-links li a:hover {
+    color: #e91e63;
+    text-decoration: none;
+}  
+  /* Events container styles */
+.events-container {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+  
+.events-container h2 {
+    color: #333;
+}
+  
+#event-list {
+    list-style-type: none;
+    padding: 0;
+}
+  
+#event-list li {
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+  
+#event-list li img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+  
+#event-list li button {
+    background-color: #f06292;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+  
+#event-list li button:hover {
+    background-color: #d81b60;
+}
+  
+  /* Add Event Form */
+.form-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+  
+#eventForm input,
+#eventForm textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+  
+#eventForm button {
+    background-color: #f06292;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+  
+#eventForm button:hover {
+    background-color: #d81b60;
+}
+  
+  
+  /* Modal Styles */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+#modalEventDescription {
+    white-space: pre-wrap;  
+    word-wrap: break-word;  
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: auto;  
+    overflow-y: visible;  
+}
+
+
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.modal-content img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+  
+#registerButton {
+    background-color: #f06292;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+  
+#registerButton:hover {
+
+    background-color: #d81b60;
+}
+
+/* About and Contact Sections */
+.about, .contact {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contact button {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.contact button:hover {
+    background-color: #d81b60;
+}
+.logo .link{
+  display: flex;
+  flex-direction: row;
+}
+.logo .link #one{
+  color: #fff;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
